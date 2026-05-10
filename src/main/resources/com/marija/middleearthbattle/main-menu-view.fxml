@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainMenuRoot" styleClass="menu-background" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marija.middleearthbattle.MainMenuController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" styleClass="top-bar">
+            <padding>
+                <Insets bottom="18" left="24" right="24" top="18" />
+            </padding>
+
+            <Label styleClass="game-title" text="Middle-earth Battle" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label styleClass="small-text" text="Gondor vs Mordor" />
+
+            <Button fx:id="musicToggleButton" onAction="#handleToggleMusic" styleClass="toolbar-button" text="Music On" />
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane alignment="CENTER">
+            <VBox alignment="CENTER" maxWidth="1500.0" prefHeight="273.0" prefWidth="1500.0" spacing="18" styleClass="menu-content-box">
+                <Label alignment="CENTER" maxWidth="2000.0" prefHeight="0.0" prefWidth="2000.0" styleClass="hero-title" text="GONDOR VS MORDOR" textAlignment="CENTER" />
+
+                <Label alignment="CENTER" maxWidth="760" styleClass="subtitle" text="Turn-based strategy battle simulator" wrapText="true" />
+
+                <VBox alignment="CENTER" maxWidth="360" spacing="12">
+                    <Button maxWidth="Infinity" onAction="#handleNewGame" styleClass="primary-button" text="New Game" />
+
+                    <Button maxWidth="Infinity" onAction="#handleLoadGame" styleClass="secondary-button" text="Load Game" />
+
+                    <Button maxWidth="Infinity" onAction="#handleHostGame" styleClass="secondary-button" text="Host Game" />
+
+                    <Button maxWidth="Infinity" onAction="#handleJoinGame" styleClass="secondary-button" text="Join Game" />
+
+                    <Button maxWidth="Infinity" onAction="#handleGenerateDocumentation" styleClass="secondary-button" text="Generate Documentation" />
+
+                    <Button maxWidth="Infinity" onAction="#handleExit" styleClass="danger-button" text="Exit" />
+                </VBox>
+
+                <Label fx:id="statusLabel" alignment="CENTER" maxWidth="500" styleClass="status-text" text="Ready for battle." wrapText="true" />
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gameConfiguration>
+    <units>
+        <unit attack="24" defense="8" faction="GONDOR" maxHealth="100" name="Gondor Commander" unitType="COMMANDER"/>
+        <unit attack="18" defense="10" faction="GONDOR" maxHealth="95" name="Gondor Soldier" unitType="INFANTRY"/>
+        <unit attack="21" defense="5" faction="GONDOR" maxHealth="65" name="Gondor Archer" unitType="RANGED"/>
+        <unit attack="23" defense="7" faction="GONDOR" maxHealth="90" name="Gondor Cavalry" unitType="CAVALRY"/>
+        <unit attack="24" defense="8" faction="MORDOR" maxHealth="100" name="Mordor Commander" unitType="COMMANDER"/>
+        <unit attack="18" defense="10" faction="MORDOR" maxHealth="80" name="Orc Warrior" unitType="INFANTRY"/>
+        <unit attack="21" defense="5" faction="MORDOR" maxHealth="65" name="Orc Archer" unitType="RANGED"/>
+        <unit attack="30" defense="4" faction="MORDOR" maxHealth="150" name="Mordor Troll" unitType="MONSTER"/>
+    </units>
+</gameConfiguration>

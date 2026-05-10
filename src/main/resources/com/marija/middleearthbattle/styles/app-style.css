@@ -1,0 +1,271 @@
+.root {
+    -fx-font-family: "Georgia";
+}
+
+.menu-background {
+    -fx-background-color: linear-gradient(to bottom right, #020617, #111827, #3b0a0a);
+    -fx-background-image: url("../images/backgrounds/menu_background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.battle-background {
+    -fx-background-color: linear-gradient(to bottom right, #020617, #111827, #2b1212);
+    -fx-background-image: url("../images/backgrounds/battle_background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.top-bar {
+    -fx-background-color: rgba(15, 23, 42, 0.48);
+}
+
+.game-title {
+    -fx-text-fill: #f8fafc;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 10, 0.4, 0, 2);
+}
+
+.hero-title {
+    -fx-text-fill: #f8fafc;
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 12, 0.4, 0, 2);
+}
+
+.subtitle {
+    -fx-text-fill: #f1f5f9;
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 8, 0.35, 0, 1);
+}
+
+.small-text {
+    -fx-text-fill: #f1f5f9;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.80), 6, 0.25, 0, 1);
+}
+
+.status-text {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.90), 8, 0.35, 0, 1);
+}
+
+.menu-content-box {
+    -fx-padding: 26 30 26 30;
+}
+
+.gondor-panel {
+    -fx-background-color: rgba(7, 18, 40, 0.68);
+    -fx-background-radius: 22;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 18, 0.28, 0, 5);
+}
+
+.mordor-panel {
+    -fx-background-color: rgba(110, 10, 10, 0.66);
+    -fx-background-radius: 22;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 18, 0.28, 0, 5);
+}
+
+.action-panel {
+    -fx-background-color: rgba(30, 41, 59, 0.76);
+    -fx-background-radius: 22;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 18, 0.28, 0, 5);
+}
+
+.gondor-unit-card {
+    -fx-background-color: rgba(15, 23, 42, 0.72);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(148, 163, 184, 0.38);
+    -fx-border-radius: 16;
+    -fx-padding: 10;
+}
+
+.mordor-unit-card {
+    -fx-background-color: rgba(80, 10, 10, 0.72);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(254, 202, 202, 0.30);
+    -fx-border-radius: 16;
+    -fx-padding: 10;
+}
+
+.unit-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 7, 0.3, 0, 1);
+}
+
+.health-label {
+    -fx-text-fill: #dbeafe;
+    -fx-font-size: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 6, 0.3, 0, 1);
+}
+
+.mordor-health-label {
+    -fx-text-fill: #fecaca;
+    -fx-font-size: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 6, 0.3, 0, 1);
+}
+
+.primary-button {
+    -fx-background-color: #7b8da8;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 11;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #8d9db6;
+}
+
+.secondary-button {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 11;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #475569;
+}
+
+.danger-button {
+    -fx-background-color: #a11d1d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 11;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.danger-button:hover {
+    -fx-background-color: #b91c1c;
+}
+
+.text-area {
+    -fx-control-inner-background: rgba(10, 20, 45, 0.94);
+    -fx-text-fill: white;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 12px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.text-area .content {
+    -fx-background-color: rgba(10, 20, 45, 0.94);
+}
+
+.combo-box {
+    -fx-background-radius: 8;
+    -fx-font-size: 12px;
+}
+
+.combo-box .list-cell {
+    -fx-font-size: 12px;
+}
+
+.turn-label {
+    -fx-text-fill: #fde68a;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.80), 6, 0.25, 0, 1);
+}
+
+.perspective-label {
+    -fx-text-fill: #f1f5f9;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.80), 6, 0.25, 0, 1);
+}
+
+.section-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.98), 12, 0.45, 0, 2);
+}
+
+.action-title {
+    -fx-text-fill: #f8fafc;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 8, 0.35, 0, 2);
+}
+
+.gondor-panel-title {
+    -fx-text-fill: #dbeafe;
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 8, 0.35, 0, 2);
+}
+
+.mordor-panel-title {
+    -fx-text-fill: #fecaca;
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.85), 8, 0.35, 0, 2);
+}
+
+.chat-input {
+    -fx-background-radius: 8;
+    -fx-font-size: 12px;
+}
+
+.progress-bar {
+    -fx-accent: #10bcd6;
+}
+
+.toolbar-button {
+    -fx-background-color: rgba(51, 65, 85, 0.92);
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.toolbar-button:hover {
+    -fx-background-color: rgba(71, 85, 105, 0.98);
+}
+
+.unit-image {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.60), 12, 0.35, 0, 3);
+}
+
+.chat-send-button {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 8 5 8;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.chat-send-button:hover {
+    -fx-background-color: #475569;
+}
+
+#chatTextArea {
+    -fx-font-size: 13px;
+}

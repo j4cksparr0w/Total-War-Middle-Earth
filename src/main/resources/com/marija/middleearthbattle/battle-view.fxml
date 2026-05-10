@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="battleRoot" styleClass="battle-background" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marija.middleearthbattle.BattleController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="16" styleClass="top-bar">
+            <padding>
+                <Insets bottom="12" left="24" right="24" top="12" />
+            </padding>
+
+            <Label styleClass="game-title" text="Battle of Middle-earth" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="currentTurnLabel" styleClass="turn-label" text="Current turn: Gondor" />
+
+            <Label fx:id="playerPerspectiveLabel" styleClass="perspective-label" text="Mode: Local test" />
+
+            <Button fx:id="musicToggleButton" onAction="#handleToggleMusic" styleClass="toolbar-button" text="Music On" />
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane alignment="CENTER">
+            <HBox alignment="TOP_CENTER" maxWidth="1280" spacing="20">
+                <padding>
+                    <Insets bottom="6" left="22" right="22" top="10" />
+                </padding>
+
+                <VBox prefWidth="415" spacing="12" styleClass="gondor-panel">
+                    <Label styleClass="gondor-panel-title" text="GONDOR" />
+                    <Separator />
+
+                    <GridPane hgap="12" vgap="12">
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="gondor-unit-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <ImageView fx:id="gondorCommanderImageView" fitHeight="96.0" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Commander" wrapText="true" />
+                            <ProgressBar fx:id="gondorCommanderHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="gondorCommanderHealthLabel" styleClass="health-label" text="100/100 HP" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="gondor-unit-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <ImageView fx:id="gondorSoldierImageView" fitHeight="96.0" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Soldier" wrapText="true" />
+                            <ProgressBar fx:id="gondorInfantryHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="gondorInfantryHealthLabel" styleClass="health-label" text="95/95 HP" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="gondor-unit-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <ImageView fx:id="gondorArcherImageView" fitHeight="96.0" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Archer" wrapText="true" />
+                            <ProgressBar fx:id="gondorRangedHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="gondorRangedHealthLabel" styleClass="health-label" text="65/65 HP" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="gondor-unit-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <ImageView fx:id="gondorCavalryImageView" fitHeight="86" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Cavalry" wrapText="true" />
+                            <ProgressBar fx:id="gondorCavalryHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="gondorCavalryHealthLabel" styleClass="health-label" text="90/90 HP" />
+                        </VBox>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+
+                <VBox alignment="TOP_CENTER" prefWidth="340" spacing="12" styleClass="action-panel">
+                    <Label styleClass="action-title" text="Actions" />
+
+                    <Label styleClass="small-text" text="Attacker" />
+                    <ComboBox fx:id="attackerComboBox" maxWidth="315" prefWidth="315" />
+
+                    <Label styleClass="small-text" text="Target" />
+                    <ComboBox fx:id="defenderComboBox" maxWidth="315" prefWidth="315" />
+
+                    <Button fx:id="attackButton" maxWidth="315" onAction="#handleAttack" prefWidth="315" styleClass="primary-button" text="Attack" />
+
+                    <Button fx:id="endTurnButton" maxWidth="315" onAction="#handleEndTurn" prefWidth="315" styleClass="secondary-button" text="End Turn" />
+
+                    <Button maxWidth="315" onAction="#handleSaveGame" prefWidth="315" styleClass="secondary-button" text="Save Game" />
+
+                    <Button maxWidth="315" onAction="#handleLoadGame" prefWidth="315" styleClass="secondary-button" text="Load Game" />
+
+                    <Button maxWidth="315" onAction="#handleBackToMenu" prefWidth="315" styleClass="danger-button" text="Back to Menu" />
+
+                    <Label fx:id="battleStatusLabel" alignment="CENTER" maxWidth="295" styleClass="status-text" text="Choose your next move." wrapText="true" />
+                </VBox>
+
+                <VBox prefWidth="415" spacing="12" styleClass="mordor-panel">
+                    <Label styleClass="mordor-panel-title" text="MORDOR" />
+                    <Separator />
+
+                    <GridPane hgap="12" vgap="12">
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="mordor-unit-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <ImageView fx:id="mordorCommanderImageView" fitHeight="96.0" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Dark Commander" wrapText="true" />
+                            <ProgressBar fx:id="mordorCommanderHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="mordorCommanderHealthLabel" styleClass="mordor-health-label" text="100/100 HP" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="mordor-unit-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <ImageView fx:id="orcWarriorImageView" fitHeight="86" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Orc Warrior" wrapText="true" />
+                            <ProgressBar fx:id="mordorInfantryHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="mordorInfantryHealthLabel" styleClass="mordor-health-label" text="80/80 HP" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="mordor-unit-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <ImageView fx:id="orcArcherImageView" fitHeight="96.0" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Orc Archer" wrapText="true" />
+                            <ProgressBar fx:id="mordorRangedHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="mordorRangedHealthLabel" styleClass="mordor-health-label" text="65/65 HP" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefWidth="178" spacing="6" styleClass="mordor-unit-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <ImageView fx:id="mordorTrollImageView" fitHeight="86" fitWidth="180.0" preserveRatio="true" styleClass="unit-image" />
+                            <Label maxWidth="155" styleClass="unit-label" text="Troll" wrapText="true" />
+                            <ProgressBar fx:id="mordorMonsterHealthBar" prefWidth="125" progress="1.0" />
+                            <Label fx:id="mordorMonsterHealthLabel" styleClass="mordor-health-label" text="150/150 HP" />
+                        </VBox>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+            </HBox>
+        </StackPane>
+    </center>
+
+    <bottom>
+        <StackPane alignment="CENTER">
+            <HBox maxWidth="1280" spacing="16">
+                <padding>
+                    <Insets bottom="16" left="22" right="22" top="2" />
+                </padding>
+
+                <VBox spacing="6" HBox.hgrow="ALWAYS">
+                    <Label styleClass="section-title" text="Battle Log" />
+
+                    <TextArea fx:id="battleLogTextArea" editable="false" prefHeight="95" wrapText="true" />
+                </VBox>
+
+                <VBox prefWidth="420" spacing="6">
+                    <Label styleClass="section-title" text="RMI Chat" />
+
+                    <TextArea fx:id="chatTextArea" editable="false" prefHeight="95" wrapText="true" />
+
+                    <HBox spacing="8">
+                        <TextField fx:id="chatMessageTextField" prefWidth="300" promptText="Type message..." styleClass="chat-input" HBox.hgrow="ALWAYS" />
+
+                        <Button maxWidth="72" minWidth="72" onAction="#handleSendChatMessage" prefWidth="72" styleClass="chat-send-button" text="Send" />
+                    </HBox>
+                </VBox>
+            </HBox>
+        </StackPane>
+    </bottom>
+
+</BorderPane>
